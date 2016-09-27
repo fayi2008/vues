@@ -11,7 +11,6 @@ module.exports=function (app, express) {
             }
             else{
                 
-
                 res.json(rows);
 
             }
