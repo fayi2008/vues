@@ -18,10 +18,17 @@ app.use(function (req, res, next) {
 // log all requests to the console
 app.use(morgan('dev'));
 
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
+app.use(express.static('./dist'));
 
 var apiRoutes = require('./app/data/inface')(app, express);
 app.use('/api', apiRoutes);
+
+app.get('/', function (req, res){
+    res.sendFile(path.join(__dirname + '/public/index.html'));
+});
+
+
 
 app.get('/user', function (req, res){
     res.sendFile(path.join(__dirname + '/public/user.html'));

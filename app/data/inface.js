@@ -7,7 +7,7 @@ module.exports=function (app, express) {
     console.log(1)
     rout.get('/user',function(req, res){
 
-        
+
         db.query('select * from user',function (err,rows,a) {
             console.log(3)
             if (err){
@@ -15,7 +15,12 @@ module.exports=function (app, express) {
             }
             else{
 
-                res.json(rows);
+
+                var list={
+                    status:1,
+                    result:rows
+                }
+                res.json(list);
 
             }
 
