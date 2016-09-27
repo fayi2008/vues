@@ -27,6 +27,6 @@ app.get('/user', function (req, res){
     res.sendFile(path.join(__dirname + '/public/user.html'));
 });
 
-app.listen(8081);
 
-console.log('Server started on http://localhost:8081');
+
+app.listen(8081);

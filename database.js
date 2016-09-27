@@ -20,6 +20,7 @@ var test = mysql.createPool({
 // test.end();
 
 test.getConnection(function (err,connection) {
+    console.log(4)
     if (err) {
         console.log(err);
         connection.release();
