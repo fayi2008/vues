@@ -5,10 +5,10 @@ module.exports=function (app, express) {
     var rout = express.Router();
 
 
-    rout.get('/user',function(req, res){
+    rout.get('/user?id=',function(req, res){
 
 
-        db.query('select * from user',function (err,rows,a) {
+        db.query('select * from user where name=?',{},function (err,rows,a) {
 
             if (err){
                 console.log(err);
