@@ -33,8 +33,10 @@ app.use(session({
     saveUninitialized: true,
 }));
 
-var apiRoutes = require('./app/data/inface')(app, express);
+var apiRoutes = require('./app/data/user')(app, express);
 app.use('/api', apiRoutes);
+
+
 
 
 app.get('/', function (req, res) {
