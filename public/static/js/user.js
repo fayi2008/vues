@@ -17,6 +17,7 @@ class user{
 
 
         }).always(function () {
+
             _this.submit()
         })
     }
