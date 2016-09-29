@@ -36,7 +36,8 @@ app.use(session({
 var apiRoutes = require('./app/data/user')(app, express);
 app.use('/api', apiRoutes);
 
-
+var apiRoutes = require('./app/data/test')(app, express);
+app.use('/api', apiRoutes);
 
 
 app.get('/', function (req, res) {

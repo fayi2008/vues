@@ -34,7 +34,7 @@ class index{
                 alert('请填写密码')
                 return false
             }
-            $('.login').on('click')
+            $('#login').off('click')
             _this.init({name:name,password:password})
 
         })

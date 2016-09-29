@@ -11,6 +11,9 @@ class user{
         $.post('/api/signup',data,'JSON').done(function (rs) {
 
             alert(rs.msg)
+            if(rs.success==1){
+                location.replace('/')
+            }
 
 
         }).always(function () {
@@ -21,8 +24,8 @@ class user{
     submit(){
         var _this=this
 
-        console.log($('#login'))
-        $('#login').on('click',function () {
+        console.log($('#signup'))
+        $('#signup').on('click',function () {
 
             var name=$('.name').val(),
                 password=$('.password').val()
@@ -34,7 +37,7 @@ class user{
                 alert('请填写密码')
                 return false
             }
-            $('.signup').on('click')
+            $('#signup').off('click')
             _this.init({name:name,password:password})
 
         })
@@ -45,4 +48,4 @@ class user{
 
 
 
-new index()
+new user()

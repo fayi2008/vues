@@ -5,7 +5,8 @@ var path=require('path')
 module.exports = {
     //页面入口文件配置
     entry: {
-        index: './public/static/js/index.js'
+        index: './public/static/js/index.js',
+        user: './public/static/js/user.js'
     },
     //入口文件输出配置
     output: {
