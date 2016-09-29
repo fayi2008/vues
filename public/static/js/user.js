@@ -1,6 +1,6 @@
 import '../css/public.less';
 
-class index{
+class user{
 
     constructor(){
         this.submit()
@@ -8,9 +8,9 @@ class index{
 
     init(data){
         var _this=this
-        $.post('/api/user',data,'JSON').done(function (rs) {
+        $.post('/api/signup',data,'JSON').done(function (rs) {
 
-                alert(rs.msg)
+            alert(rs.msg)
 
 
         }).always(function () {
@@ -34,7 +34,7 @@ class index{
                 alert('请填写密码')
                 return false
             }
-            $('.login').on('click')
+            $('.signup').on('click')
             _this.init({name:name,password:password})
 
         })

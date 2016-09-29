@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="/css/index.css">
     <script src="/js/com.js"></script>
-    <script src="/js/index.js"></script>
+
 </head>
 <body id="index">
 <div class="header">
@@ -15,14 +15,16 @@
 </div>
 <div class="example-box" v-for="list1 in result">
     <div class="example-title">
-        {{list1.name}}
+        <input class="name" type="test" placeholder="请输入账号">
     </div>
     <div class="example-title">
-        {{list1.password}}
+        <input class="password" type="password" placeholder="请输入密码">
+    </div>
+    <div class="example-title">
+        <div id="login">登录</div>
     </div>
 </div>
 
-
-
+<script src="/js/index.js"></script>
 </body>
 </html>
