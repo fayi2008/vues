@@ -6,8 +6,9 @@ class user{
         this.submit()
     }
 
+
     init(data){
-        var _this=this
+        let _this=this
         $.post('/api/signup',data,'JSON').done(function (rs) {
 
             alert(rs.msg)
@@ -16,7 +17,10 @@ class user{
             }
 
 
-        }).always(function () {
+
+        }).always( function () {
+
+        
 
             _this.submit()
         })
